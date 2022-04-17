@@ -33,3 +33,8 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## vue-awesome-swiper@4.1.1 and swiper@5.2.0
+I would like to use swiperjs, but unfortunately it's not compatible with Vue2
+
+https://github.com/surmon-china/vue-awesome-swiper/tree/v4.1.1
