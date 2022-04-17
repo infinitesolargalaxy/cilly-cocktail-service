@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <router-link to="/swiper-JS">Swiper JS</router-link>
+      <router-link to="/vue-carousel-3d">Swiper JS</router-link>
     </div>
     <router-view/>
   </div>

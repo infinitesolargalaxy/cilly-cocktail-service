@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import SwiperJS from '../views/SwiperJS.vue'
+import VueCarousel3D from '../views/VueCarousel3D.vue'
 
 Vue.use(VueRouter)
 
@@ -19,10 +20,15 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
+  // {
+  //   path: '/swiper-JS',
+  //   name: 'SwiperJS',
+  //   component: SwiperJS
+  // },
   {
-    path: '/swiper-JS',
-    name: 'SwiperJS',
-    component: SwiperJS
+    path: '/vue-carousel-3d',
+    name: 'VueCarousel3D',
+    component: VueCarousel3D
   },
 ]
 
