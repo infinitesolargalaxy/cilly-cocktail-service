@@ -38,3 +38,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 I would like to use swiperjs, but unfortunately it's not compatible with Vue2
 
 https://github.com/surmon-china/vue-awesome-swiper/tree/v4.1.1
+
+## Vue Carousel 3D
+https://wlada.github.io/vue-carousel-3d/
+
+## Swiper CoreJS
