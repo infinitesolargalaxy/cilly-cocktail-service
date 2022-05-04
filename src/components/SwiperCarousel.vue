@@ -12,6 +12,8 @@
       <div class="swiper-slide">Slide 9</div>
     </div>
     <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </template>
 
@@ -22,10 +24,11 @@
   import Swiper, { Navigation, Pagination } from 'swiper';
   // import Swiper and modules styles
   import 'swiper/swiper.scss';
-  // import 'swiper/css/navigation';
-  // import 'swiper/css/pagination';
+  import 'swiper/modules/navigation/navigation.scss';
+  import 'swiper/modules/pagination/pagination.scss';
+
   export default Vue.extend({
-    name: 'Swiper Carousel',
+    name: 'SwiperCarousel',
     components: {
     },
     data() {
@@ -38,7 +41,7 @@
       
     },
     mounted() {
-      const swiper = new Swiper(".mySwiper", {
+      const swiper = new Swiper(".swiper", {
         modules: [Navigation, Pagination],
         slidesPerView: "auto",
         centeredSlides: true,
@@ -46,26 +49,31 @@
         slideToClickedSlide: true,
         observer: true, // Responsively update to changed slides
         spaceBetween: 30,
+        autoplay: {
+          delay: 500,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-        // navigation: {
-
-        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         // breakpoints: {
 
         // },
       });
 
-      // this.swiper = swiper;
+      this.swiper = swiper;
     }
   });
 </script>
 <style scoped lang="scss">
 .swiper {
-        width: 100%;
-        height: 100%;
+        width: 80vw;
+        height: 50vh;
       }
 
       .swiper-slide {
@@ -97,5 +105,8 @@
 
       .swiper-slide {
         width: 60%;
+      }
+      .swiper-pagination {
+        height: 5rem;
       }
 </style>

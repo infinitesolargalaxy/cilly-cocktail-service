@@ -9,6 +9,12 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '/',
+    redirect: () => {
+      return '/cocktail';
+    },
+  },
+  {
+    path: '/home',
     name: 'Home',
     component: Home
   },
@@ -16,7 +22,7 @@ const routes: Array<RouteConfig> = [
     path: '/about',
     name: 'About',
     component: About
-  },
+  }, // Our Story, etc
   {
     path: '/cocktail',
     name: 'CocktailRecipeBook',

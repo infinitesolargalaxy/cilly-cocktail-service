@@ -3,7 +3,7 @@
     <h1>Cilly Cocktail Service</h1>
 
 		<input type="text" name="" value="">
-		<button type="button" name="button">Get Cocktail</button>
+		<button type="button" name="button" @click="getFetch">Get Cocktail</button>
 
     <SwiperCarousel />
   </div>
@@ -23,17 +23,20 @@ export default Vue.extend({
       curSlides: []
     }
   },
+  async mounted() {
+    const choice = 'mojito';
+    this.getFetch(choice);
+  },
   methods: {
-    getChoice() {
+    getCocktail() {
       const choice = document.querySelector('input')?.value as string;
       if (!choice.trim()) {
           alert('Please enter a valid name')
-          return;
+          return '';
       }
-      return choice;
+      this.getFetch(choice);
     },
-    getFetch(choice: string) {
-      
+    async getFetch(choice: string) {
       const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choice}`
 
       fetch(url)
@@ -41,6 +44,10 @@ export default Vue.extend({
           .then(data => {
             console.log(data)
             const { drinks } = data;
+
+            // if (drinks.length > 0) {
+              
+            // }
 
             // Create table showing each image and instructions
             const drink = drinks[0];

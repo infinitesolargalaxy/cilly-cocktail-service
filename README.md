@@ -43,3 +43,8 @@ https://github.com/surmon-china/vue-awesome-swiper/tree/v4.1.1
 https://wlada.github.io/vue-carousel-3d/
 
 ## Swiper CoreJS
+
+## Add Stylelint to VueJS (Doesn't work...)
+https://stackoverflow.com/questions/57145811/integrating-stylelint-with-vue-js
+
+`yarn add -D stylelint stylelint-scss stylelint-config-recommended-scss stylelint-webpack-plugin`
